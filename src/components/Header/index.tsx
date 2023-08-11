@@ -17,8 +17,10 @@ export const Header = () => {
 
       <S.OptionsWrapper>
         <S.OptionWrapper>
-          <S.Option>
-            <Typography size={1.7}>1</Typography>
+          <S.Option state="active">
+            <Typography size={1.7} color="white">
+              1
+            </Typography>
           </S.Option>
 
           <Typography size={1} fontWeight="700">
@@ -27,7 +29,7 @@ export const Header = () => {
         </S.OptionWrapper>
 
         <S.OptionWrapper>
-          <S.Option>
+          <S.Option state="default">
             <Typography size={1.7} color="dark_blue__800">
               2
             </Typography>

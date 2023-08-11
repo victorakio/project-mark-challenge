@@ -1,5 +1,5 @@
 import { colors } from '@stlyes/colors';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -21,16 +21,32 @@ export const OptionWrapper = styled.div`
   align-items: center;
 `;
 
-export const Option = styled.div`
-  width: 5rem;
-  height: 5rem;
-  border-radius: 1.5rem;
-  background-color: ${colors.white};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.3rem;
-  border: 0.1rem solid ${colors.dark_blue__300};
+const optionState = {
+  active: () => css`
+    background-color: ${colors.dark_blue__800};
+    border: 0.1rem solid ${colors.dark_blue__800};
+  `,
+  default: () => css`
+    background-color: ${colors.white};
+    border: 0.1rem solid ${colors.dark_blue__300};
+  `,
+};
+
+interface OptionsProps {
+  state: keyof typeof optionState;
+}
+
+export const Option = styled.div<OptionsProps>`
+  ${({ state }) => css`
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    ${optionState[state]}
+  `}
 `;
 
 export const Button = styled.button`
