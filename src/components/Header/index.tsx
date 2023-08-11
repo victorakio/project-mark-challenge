@@ -8,7 +8,7 @@ export const Header = () => {
     <S.HeaderWrapper>
       <Link href="/">
         <Image
-          src="/images/logo/project-mark-logo.png"
+          src="/images/logo/logo.svg"
           width={37}
           height={37}
           alt="Project Mark logo"
