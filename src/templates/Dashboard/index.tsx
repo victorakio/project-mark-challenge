@@ -49,17 +49,17 @@ export const Dashboard = () => {
         </S.CheckboxWrapper>
 
         <S.ColumnsWrapper>
-          <StatusColumn />
+          <StatusColumn variant="lead" id="lead" />
 
-          <StatusColumn />
+          <StatusColumn variant="progress" id="progress" />
 
-          <StatusColumn />
+          <StatusColumn variant="submitted" id="submitted" />
 
-          <StatusColumn />
+          <StatusColumn variant="won" id="won" />
 
-          <StatusColumn />
+          <StatusColumn variant="lost" id="lost" />
 
-          <StatusColumn />
+          <StatusColumn variant="closed" id="closed" />
         </S.ColumnsWrapper>
 
         <S.FadeArea />
