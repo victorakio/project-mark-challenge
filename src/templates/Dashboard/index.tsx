@@ -3,8 +3,11 @@ import * as S from './styles';
 import { Typography } from '@components/Typography';
 import { Checkbox } from '@components/Checkbox';
 import { StatusColumn } from '@components/StatusColumn';
+import { useSelectedOption } from './useSelectedOption';
 
 export const Dashboard = () => {
+  const { selectedOption, handleSelectedOption } = useSelectedOption();
+
   return (
     <S.OuterWrapper>
       <Header />
@@ -16,13 +19,33 @@ export const Dashboard = () => {
         </Typography>
 
         <S.CheckboxWrapper>
-          <Checkbox />
+          <Checkbox
+            checked={selectedOption === 'basic'}
+            id="basic"
+            label="Basic"
+            onChange={() => handleSelectedOption('basic')}
+          />
 
-          <Checkbox />
+          <Checkbox
+            checked={selectedOption === 'advanced'}
+            id="advanced"
+            label="Advanced"
+            onChange={() => handleSelectedOption('advanced')}
+          />
 
-          <Checkbox />
+          <Checkbox
+            checked={selectedOption === 'expert'}
+            id="expert"
+            label="Expert"
+            onChange={() => handleSelectedOption('expert')}
+          />
 
-          <Checkbox />
+          <Checkbox
+            checked={selectedOption === 'custom'}
+            id="custom"
+            label="Custom"
+            onChange={() => handleSelectedOption('custom')}
+          />
         </S.CheckboxWrapper>
 
         <S.ColumnsWrapper>

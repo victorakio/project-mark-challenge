@@ -1,20 +1,51 @@
 import { colors } from '@stlyes/colors';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const CheckboxWrapper = styled.label`
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border: 0.1rem solid ${colors.gray__300};
-  border-radius: 1rem;
+interface CheckboxWrapperProps {
+  $isActive: boolean;
+}
 
-  &:hover {
-    background-color: ${colors.gray__200};
-  }
+export const CheckboxWrapper = styled.label<CheckboxWrapperProps>`
+  ${({ $isActive }) => css`
+    display: flex;
+    width: 21rem;
+    align-items: center;
+    padding: 1rem;
+    border: 0.1rem solid ${colors.gray__300};
+    border-radius: 1rem;
+    position: relative;
 
-  &:not(last-child) {
-    margin-right: 1rem;
-  }
+    &:hover {
+      background-color: ${colors.gray__200};
+    }
+
+    &:not(last-child) {
+      margin-right: 1rem;
+    }
+
+    ${$isActive &&
+    css`
+      border: 0.2rem solid ${colors.blue__highlight};
+
+      &:hover {
+        background-color: ${colors.white};
+      }
+
+      &::after {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: -0.73rem;
+        border-top: 0.2rem solid ${colors.blue__highlight};
+        border-left: 0.2rem solid ${colors.blue__highlight};
+        background-color: white;
+        left: 50%;
+        transform: translateX(-50%) rotate(225deg);
+        border-radius: 0.1rem;
+      }
+    `}
+  `}
 `;
 
 export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
@@ -35,15 +66,18 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
   }
 
   &::before {
-    content: '';
-    width: 0.65em;
-    height: 0.65em;
+    content: url('/images/assets/check-mark.svg');
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
+    transform-origin: bottom left;
   }
 
   &:checked::before {
     transform: scale(1);
+  }
+
+  &:checked {
+    background-color: ${colors.blue__highlight};
+    border-color: ${colors.blue__highlight};
   }
 `;
