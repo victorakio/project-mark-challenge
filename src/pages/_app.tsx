@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { CSSReset } from '@stlyes/reset';
 import Head from 'next/head';
 import { StyleSheetManager } from 'styled-components';
+import { SelectedOptionProvider } from '@hooks/useSelectedOption';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -22,7 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <CSSReset />
 
-      <Component {...pageProps} />
+      <SelectedOptionProvider>
+        <Component {...pageProps} />
+      </SelectedOptionProvider>
     </StyleSheetManager>
   );
 }

@@ -3,7 +3,7 @@ import * as S from './styles';
 import { Typography } from '@components/Typography';
 import { Checkbox } from '@components/Checkbox';
 import { StatusColumn } from '@components/StatusColumn';
-import { useSelectedOption } from './useSelectedOption';
+import { useSelectedOption } from '@hooks/useSelectedOption';
 
 export const Dashboard = () => {
   const { selectedOption, handleSelectedOption } = useSelectedOption();
