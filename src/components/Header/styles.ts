@@ -51,6 +51,8 @@ export const Option = styled.div<OptionsProps>`
     justify-content: center;
     align-items: center;
     margin-bottom: 0.3rem;
+    transition: background-color ease-in-out 0.5s;
+
     ${optionState[$state]}
   `}
 `;

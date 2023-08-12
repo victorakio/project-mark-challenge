@@ -2,10 +2,10 @@ import Link from 'next/link';
 import * as S from './styles';
 import Image from 'next/image';
 import { Typography } from '@components/Typography';
-import { useSelectedOption } from '@hooks/useSelectedOption';
+import { Steps, useSelectedOption } from '@hooks/useSelectedOption';
 
 export const Header = () => {
-  const { selectedOption } = useSelectedOption();
+  const { selectedOption, currentStep, handleNextStep } = useSelectedOption();
 
   return (
     <S.HeaderWrapper>
@@ -20,8 +20,17 @@ export const Header = () => {
 
       <S.OptionsWrapper>
         <S.OptionWrapper>
-          <S.Option $state="active">
-            <Typography size={1.7} color="white">
+          <S.Option
+            $state={currentStep === Steps.sales_pipeline ? 'active' : 'default'}
+          >
+            <Typography
+              size={1.7}
+              color={
+                currentStep === Steps.sales_pipeline
+                  ? 'white'
+                  : 'dark_blue__800'
+              }
+            >
               1
             </Typography>
           </S.Option>
@@ -32,8 +41,19 @@ export const Header = () => {
         </S.OptionWrapper>
 
         <S.OptionWrapper>
-          <S.Option $state="default">
-            <Typography size={1.7} color="dark_blue__800">
+          <S.Option
+            $state={
+              currentStep === Steps.opportunity_details ? 'active' : 'default'
+            }
+          >
+            <Typography
+              size={1.7}
+              color={
+                currentStep === Steps.opportunity_details
+                  ? 'white'
+                  : 'dark_blue__800'
+              }
+            >
               2
             </Typography>
           </S.Option>
@@ -44,9 +64,9 @@ export const Header = () => {
         </S.OptionWrapper>
       </S.OptionsWrapper>
 
-      <S.Button disabled={!selectedOption}>
+      <S.Button disabled={!selectedOption} onClick={handleNextStep}>
         <Typography color="white" fontWeight="700">
-          Next
+          {currentStep === Steps.opportunity_details ? 'Back' : 'Next'}
         </Typography>
       </S.Button>
     </S.HeaderWrapper>
