@@ -2,8 +2,11 @@ import Link from 'next/link';
 import * as S from './styles';
 import Image from 'next/image';
 import { Typography } from '@components/Typography';
+import { useSelectedOption } from '@hooks/useSelectedOption';
 
 export const Header = () => {
+  const { selectedOption } = useSelectedOption();
+
   return (
     <S.HeaderWrapper>
       <Link href="/">
@@ -41,7 +44,7 @@ export const Header = () => {
         </S.OptionWrapper>
       </S.OptionsWrapper>
 
-      <S.Button>
+      <S.Button disabled={!selectedOption}>
         <Typography color="white" fontWeight="700">
           Next
         </Typography>

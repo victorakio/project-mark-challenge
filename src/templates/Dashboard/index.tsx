@@ -4,10 +4,18 @@ import { Typography } from '@components/Typography';
 import { Checkbox } from '@components/Checkbox';
 import { ColumnVariants, StatusColumn } from '@components/StatusColumn';
 import { useSelectedOption } from '@hooks/useSelectedOption';
+import { useGetOptions } from '@hooks/useGetOptions';
+import { useGetStatuses } from '@hooks/useGetStatuses';
+import { Loader } from '@components/Loader';
 
 export const Dashboard = () => {
-  const { selectedOption, handleSelectedOption, optionsData, statusesData } =
-    useSelectedOption();
+  const { selectedOption, handleSelectedOption } = useSelectedOption();
+
+  const { optionsData, isOptionsLoading } = useGetOptions();
+
+  const { statusesData, isStatusesLoading } = useGetStatuses();
+
+  if (isOptionsLoading || isStatusesLoading) return <Loader />;
 
   return (
     <S.OuterWrapper>

@@ -54,4 +54,10 @@ export const Button = styled.button`
   border: none;
   border-radius: 3.4rem;
   background-color: ${colors.blue__highlight};
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 `;
