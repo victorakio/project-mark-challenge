@@ -21,6 +21,7 @@ export const Toggle = styled.label`
   &::after {
     content: '';
     position: absolute;
+    left: 0;
     width: 4.2rem;
     height: 2.2rem;
     border-radius: 1rem;
@@ -32,7 +33,7 @@ export const Input = styled.input.attrs({ type: 'checkbox' })`
   appearance: none;
 
   &:checked + ${Toggle}::after {
-    left: calc(100% - 4.2rem);
+    left: calc(100% - 4.1rem);
     transform: translateX(100% - 4.2rem);
     transition: all 0.5s;
   }
@@ -202,16 +203,16 @@ const columnVariants = {
 };
 
 interface StatusColumnWrapperProps {
-  variant: keyof typeof ColumnVariants;
+  $variant: keyof typeof ColumnVariants;
 }
 
 export const StatusColumnWrapper = styled.div<StatusColumnWrapperProps>`
-  ${({ variant }) => css`
+  ${({ $variant }) => css`
     width: 22rem;
     border-radius: 2rem;
     height: 100%;
     padding: 0.5rem;
 
-    ${columnVariants[variant]}
+    ${columnVariants[$variant]}
   `}
 `;

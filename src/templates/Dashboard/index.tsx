@@ -8,6 +8,18 @@ import { useSelectedOption } from '@hooks/useSelectedOption';
 export const Dashboard = () => {
   const { selectedOption, handleSelectedOption } = useSelectedOption();
 
+  const plansWithLead = ['basic', 'advanced', 'expert', 'custom'];
+
+  const plansWithProgress = ['basic', 'advanced', 'expert', 'custom'];
+
+  const plansWithSubmitted = ['advanced', 'expert', 'custom'];
+
+  const plansWithWon = ['expert', 'custom'];
+
+  const plansWithLost = ['custom'];
+
+  const plansWithClosed = ['custom'];
+
   return (
     <S.OuterWrapper>
       <Header />
@@ -49,17 +61,41 @@ export const Dashboard = () => {
         </S.CheckboxWrapper>
 
         <S.ColumnsWrapper>
-          <StatusColumn variant="lead" id="lead" />
+          <StatusColumn
+            variant="lead"
+            id="lead"
+            isChecked={plansWithLead.includes(selectedOption)}
+          />
 
-          <StatusColumn variant="progress" id="progress" />
+          <StatusColumn
+            variant="progress"
+            id="progress"
+            isChecked={plansWithProgress.includes(selectedOption)}
+          />
 
-          <StatusColumn variant="submitted" id="submitted" />
+          <StatusColumn
+            variant="submitted"
+            id="submitted"
+            isChecked={plansWithSubmitted.includes(selectedOption)}
+          />
 
-          <StatusColumn variant="won" id="won" />
+          <StatusColumn
+            variant="won"
+            id="won"
+            isChecked={plansWithWon.includes(selectedOption)}
+          />
 
-          <StatusColumn variant="lost" id="lost" />
+          <StatusColumn
+            variant="lost"
+            id="lost"
+            isChecked={plansWithLost.includes(selectedOption)}
+          />
 
-          <StatusColumn variant="closed" id="closed" />
+          <StatusColumn
+            variant="closed"
+            id="closed"
+            isChecked={plansWithClosed.includes(selectedOption)}
+          />
         </S.ColumnsWrapper>
 
         <S.FadeArea />

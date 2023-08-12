@@ -13,18 +13,28 @@ export enum ColumnVariants {
 interface StatusColumnProps {
   id: string;
   variant: keyof typeof ColumnVariants;
+  isChecked: boolean;
 }
 
-export const StatusColumn: React.FC<StatusColumnProps> = ({ id, variant }) => {
+export const StatusColumn: React.FC<StatusColumnProps> = ({
+  id,
+  variant,
+  isChecked,
+}) => {
   return (
-    <S.StatusColumnWrapper variant={variant} key={id}>
+    <S.StatusColumnWrapper $variant={variant} key={id}>
       <S.TitleArea>
         <Typography fontWeight="700">{ColumnVariants[variant]}</Typography>
 
         <S.ToggleSwitchWrapper>
-          <S.Input id="switch" name="switch" />
+          <S.Input
+            id={`${variant}-switch`}
+            name={`${variant}-switch`}
+            checked={isChecked}
+            readOnly
+          />
 
-          <S.Toggle htmlFor="switch" />
+          <S.Toggle htmlFor={`${variant}-switch`} />
         </S.ToggleSwitchWrapper>
       </S.TitleArea>
 

@@ -33,11 +33,11 @@ const optionState = {
 };
 
 interface OptionsProps {
-  state: keyof typeof optionState;
+  $state: keyof typeof optionState;
 }
 
 export const Option = styled.div<OptionsProps>`
-  ${({ state }) => css`
+  ${({ $state }) => css`
     width: 5rem;
     height: 5rem;
     border-radius: 1.5rem;
@@ -45,7 +45,7 @@ export const Option = styled.div<OptionsProps>`
     justify-content: center;
     align-items: center;
     margin-bottom: 0.3rem;
-    ${optionState[state]}
+    ${optionState[$state]}
   `}
 `;
 
