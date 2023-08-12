@@ -28,7 +28,8 @@ export const CheckboxWrapper = styled.div`
 export const ColumnsWrapper = styled.div`
   height: 100%;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.4rem;
 `;
 

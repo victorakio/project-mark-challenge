@@ -11,18 +11,16 @@ export enum ColumnVariants {
 }
 
 interface StatusColumnProps {
-  id: string;
   variant: keyof typeof ColumnVariants;
   isChecked: boolean;
 }
 
 export const StatusColumn: React.FC<StatusColumnProps> = ({
-  id,
   variant,
   isChecked,
 }) => {
   return (
-    <S.StatusColumnWrapper $variant={variant} key={id}>
+    <S.StatusColumnWrapper $variant={variant}>
       <S.TitleArea>
         <Typography fontWeight="700">{ColumnVariants[variant]}</Typography>
 
