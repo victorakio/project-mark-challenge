@@ -8,12 +8,20 @@ interface CheckboxWrapperProps {
 export const CheckboxWrapper = styled.label<CheckboxWrapperProps>`
   ${({ $isActive }) => css`
     display: flex;
-    width: 21rem;
+    width: 15rem;
     align-items: center;
     padding: 1rem;
     border: 0.1rem solid ${colors.gray__300};
     border-radius: 1rem;
     position: relative;
+
+    @media (min-width: 768px) {
+      width: 15rem;
+    }
+
+    @media (min-width: 1024px) {
+      width: 21rem;
+    }
 
     &:hover {
       background-color: ${colors.gray__200};

@@ -208,7 +208,8 @@ interface StatusColumnWrapperProps {
 
 export const StatusColumnWrapper = styled.div<StatusColumnWrapperProps>`
   ${({ $variant }) => css`
-    width: 22rem;
+    width: 100%;
+    max-width: 22rem;
     border-radius: 2rem;
     height: 100%;
     padding: 0.5rem;

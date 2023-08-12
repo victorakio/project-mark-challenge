@@ -1,9 +1,11 @@
 import { colors } from '@stlyes/colors';
 import styled, { css } from 'styled-components';
 
+export const headerHeight = '10rem';
+
 export const HeaderWrapper = styled.header`
   width: 100%;
-  height: 10rem;
+  height: ${headerHeight};
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -12,7 +14,11 @@ export const HeaderWrapper = styled.header`
 
 export const OptionsWrapper = styled.div`
   display: flex;
-  gap: 4.2rem;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    gap: 4.2rem;
+  }
 `;
 
 export const OptionWrapper = styled.div`
