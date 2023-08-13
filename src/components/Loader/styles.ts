@@ -1,5 +1,6 @@
-import { colors } from '@stlyes/colors';
 import styled from 'styled-components';
+
+import { colors } from '@stlyes/colors';
 
 export const LoaderWrapper = styled.div`
   width: 100%;
