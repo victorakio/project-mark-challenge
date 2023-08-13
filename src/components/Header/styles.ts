@@ -1,5 +1,6 @@
-import { colors } from '@stlyes/colors';
 import styled, { css } from 'styled-components';
+
+import { colors } from '@stlyes/colors';
 
 export const headerHeight = '10rem';
 

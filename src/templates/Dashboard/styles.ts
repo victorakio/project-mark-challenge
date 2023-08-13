@@ -1,6 +1,8 @@
-import { headerHeight } from '@components/Header/styles';
-import { colors } from '@stlyes/colors';
 import { styled } from 'styled-components';
+
+import { headerHeight } from '@components/Header/styles';
+
+import { colors } from '@stlyes/colors';
 
 export const OuterWrapper = styled.div`
   width: 100%;

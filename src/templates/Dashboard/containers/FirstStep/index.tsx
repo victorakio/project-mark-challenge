@@ -1,9 +1,10 @@
-import { Checkbox } from '@components/Checkbox';
-import { ColumnVariants, StatusColumn } from '@components/StatusColumn';
-import { Typography } from '@components/Typography';
 import { useGetOptions } from '@hooks/useGetOptions';
 import { useGetStatuses } from '@hooks/useGetStatuses';
 import { useSelectedOption } from '@hooks/useSelectedOption';
+
+import { Checkbox } from '@components/Checkbox';
+import { ColumnVariants, StatusColumn } from '@components/StatusColumn';
+import { Typography } from '@components/Typography';
 
 import * as S from '../../styles';
 

@@ -1,6 +1,6 @@
-import useSWR from 'swr';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import useSWR from 'swr';
 
 interface Status {
   slug: string;

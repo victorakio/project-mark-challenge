@@ -1,8 +1,10 @@
 import type { AppProps } from 'next/app';
-import { CSSReset } from '@stlyes/reset';
 import Head from 'next/head';
 import { StyleSheetManager } from 'styled-components';
+
 import { SelectedOptionProvider } from '@hooks/useSelectedOption';
+
+import { CSSReset } from '@stlyes/reset';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

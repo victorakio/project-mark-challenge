@@ -1,5 +1,7 @@
-import { colors } from '@stlyes/colors';
 import styled, { css } from 'styled-components';
+
+import { colors } from '@stlyes/colors';
+
 import { ColumnVariants } from '.';
 
 export const TitleArea = styled.div`

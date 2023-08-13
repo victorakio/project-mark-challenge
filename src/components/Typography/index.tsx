@@ -1,4 +1,5 @@
 import { colors } from '@stlyes/colors';
+
 import * as S from './styles';
 
 export interface TypographyProps {

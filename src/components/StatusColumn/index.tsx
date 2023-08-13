@@ -1,4 +1,5 @@
 import { Typography } from '@components/Typography';
+
 import * as S from './styles';
 
 export enum ColumnVariants {

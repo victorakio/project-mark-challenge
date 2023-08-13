@@ -1,6 +1,8 @@
-import { Typography } from '@components/Typography';
-import * as S from './styles';
 import { InputHTMLAttributes } from 'react';
+
+import { Typography } from '@components/Typography';
+
+import * as S from './styles';
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;

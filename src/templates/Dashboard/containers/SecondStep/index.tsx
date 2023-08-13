@@ -1,6 +1,7 @@
-import { Typography } from '@components/Typography';
 import { useGetStatuses } from '@hooks/useGetStatuses';
 import { useSelectedOption } from '@hooks/useSelectedOption';
+
+import { Typography } from '@components/Typography';
 
 import * as S from './styles';
 

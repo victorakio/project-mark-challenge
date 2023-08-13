@@ -1,11 +1,14 @@
-import { Header } from '@components/Header';
-import * as S from './styles';
 import { useGetOptions } from '@hooks/useGetOptions';
 import { useGetStatuses } from '@hooks/useGetStatuses';
-import { Loader } from '@components/Loader';
-import { FirstStep } from './containers/FirstStep';
 import { Steps, useSelectedOption } from '@hooks/useSelectedOption';
+
+import { Header } from '@components/Header';
+import { Loader } from '@components/Loader';
+
+import { FirstStep } from './containers/FirstStep';
 import { SecondStep } from './containers/SecondStep';
+
+import * as S from './styles';
 
 export const Dashboard = () => {
   const { currentStep } = useSelectedOption();

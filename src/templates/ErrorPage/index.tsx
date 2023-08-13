@@ -1,5 +1,7 @@
-import { Typography } from '@components/Typography';
 import Link from 'next/link';
+
+import { Typography } from '@components/Typography';
+
 import * as S from './styles';
 
 export const ErrorPageTemplate = () => {

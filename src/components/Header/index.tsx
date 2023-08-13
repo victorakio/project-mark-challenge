@@ -1,8 +1,11 @@
-import Link from 'next/link';
-import * as S from './styles';
 import Image from 'next/image';
-import { Typography } from '@components/Typography';
+import Link from 'next/link';
+
 import { Steps, useSelectedOption } from '@hooks/useSelectedOption';
+
+import { Typography } from '@components/Typography';
+
+import * as S from './styles';
 
 export const Header = () => {
   const { selectedOption, currentStep, handleNextStep } = useSelectedOption();

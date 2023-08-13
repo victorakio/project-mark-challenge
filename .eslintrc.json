@@ -7,6 +7,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
+  "plugins": ["simple-import-sort"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
@@ -24,6 +25,21 @@
           "multiline-block-like",
           "expression",
           "multiline-expression"
+        ]
+      }
+    ],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^\\w"],
+          ["^@hooks"],
+          ["^@templates"],
+          ["^@components"],
+          ["^@stlyes"],
+          ["^../"],
+          ["^./"],
+          ["^./styles"]
         ]
       }
     ],
