@@ -22,6 +22,7 @@ export const Header = () => {
         <S.OptionWrapper>
           <S.Option
             $state={currentStep === Steps.sales_pipeline ? 'active' : 'default'}
+            data-testid="first-step-box"
           >
             <Typography
               size={1.7}
@@ -45,6 +46,7 @@ export const Header = () => {
             $state={
               currentStep === Steps.opportunity_details ? 'active' : 'default'
             }
+            data-testid="second-step-box"
           >
             <Typography
               size={1.7}
