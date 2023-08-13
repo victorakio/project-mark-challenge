@@ -1,38 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Mark Frontend challenge
 
-## Getting Started
+![image](https://github.com/victorakio/project-mark-challenge/assets/36519906/23acc17a-29dc-4b03-a50d-8eaca62b1c99)
 
-First, run the development server:
+### Technologies used for this project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="20"> React
+- <img src="https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704" height="20"> NextJS 
+- <img src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png" height="20"> Typescript
+- <img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" height="20"> Styled components
+- <img src="https://avatars.githubusercontent.com/u/6019716?s=48&v=4" height="20"> Eslint
+- <img src="https://avatars.githubusercontent.com/u/89237858?s=48&v=4" height="20"> Playwright
+- <img src="https://camo.githubusercontent.com/272811d860f3fab0dd8ff0690e2ca36afbf0c96ad44100b8d42dfdce8511679b/68747470733a2f2f6178696f732d687474702e636f6d2f6173736574732f6c6f676f2e737667" height="20" width="20"> Axios
+- <img src="https://images.velog.io/images/hyunjoong/post/50b4c287-3f24-4f70-91a4-800738933fc2/image.png" height="20" width="20"> SWR
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### How to run the project
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Clone the project:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- With https: `git clone https://github.com/victorakio/project-mark-challenge.git`
+- Or with SSH: `git clone git@github.com:victorakio/project-mark-challenge.git`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+install dependencies with `yarn install`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+and then run `yarn dev`
 
-## Learn More
+now you will be able to access the project on the `http://localhost:3000` url
 
-To learn more about Next.js, take a look at the following resources:
+To run the e2e tests run `yarn test:e2e`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you wish to, the project is also available at: https://project-mark-challenge.vercel.app/
