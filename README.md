@@ -26,6 +26,6 @@ and then run `yarn dev`
 
 now you will be able to access the project on the `http://localhost:3000` url
 
-To run the e2e tests run `yarn test:e2e`
+To run the e2e tests run `npx playwright install` and then `yarn test:e2e`
 
 If you wish to, the project is also available at: https://project-mark-challenge.vercel.app/
